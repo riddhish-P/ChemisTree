@@ -25,6 +25,7 @@ for ix, line in enumerate(bloc[4:m.GetNumAtoms()+4]):
 
 mol = gto.M(atom= init_coords, basis = 'sto-3g')
 mf = scf.RHF(mol).run()
+print(mf.analyze())
 #mc = mcscf.CASSCF(mf, 2 ,2)
 #mc.kernel()
 
